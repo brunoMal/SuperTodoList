@@ -6,9 +6,12 @@
  * @author nonor
  *
  */
+
+import java.util.ArrayList;
+
 public class TaskList {
-	public Task[] tasks = new Task[10];
-	public int nbTasks=0;
+	private ArrayList<Task> tasks = new ArrayList<>();
+	
 	
 	/**
 	 * Affichage d'une lliste de tâche sous forme  de chaîne de caractéres
@@ -17,9 +20,10 @@ public class TaskList {
 	 */
 	public String toString() {
 		String result = "";
+		int len = tasks.size();
 		
-		for (int i = 0; i < nbTasks; i++) {
-			result += i + 1 +"/" + nbTasks + ": " + tasks[i] + "\n";
+		for (int i = 0; i < len; i++) {
+			result += i + 1 +"/" + len + ": " + tasks.get(i) + "\n";
 			}
 		return result;
 	}
@@ -34,12 +38,7 @@ public class TaskList {
 	 * 
 	 */
 	public Boolean addTask(Task newTask){
-		if (nbTasks == 10) {
-			return false;
-		} else {
-			tasks[nbTasks++] = newTask;
-			return true;
-		}
+		return tasks.add(newTask);
 	}
 	/**
 	 * Ajout d'une tâche simple
@@ -78,10 +77,10 @@ public class TaskList {
 	 * 
 	 */
 	public Boolean taskDone(int idTask){
-		if ((idTask < 0) || (idTask >= nbTasks)) {
+		if ((idTask < 0) || (idTask >= tasks.size())) {
 			return false;			
 		} else {
-			tasks[idTask].done();
+			tasks.get(idTask).done();
 			return true;		
 		}
 	}
