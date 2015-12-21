@@ -1,3 +1,4 @@
+package todolist;
 /**
  * Définition d'une liste de tâches
  */
@@ -8,6 +9,9 @@
  */
 
 import java.util.ArrayList;
+
+import todolist.special_task.RDV;
+import todolist.special_task.SimpleTask;
 
 public class TaskList {
 	private ArrayList<Task> tasks = new ArrayList<>();
