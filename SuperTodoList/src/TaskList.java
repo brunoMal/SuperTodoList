@@ -6,7 +6,7 @@
  * @author nonor
  *
  */
-public class Tasklist {
+public class TaskList {
 	public Task[] tasks = new Task[10];
 	public int nbTasks=0;
 	
