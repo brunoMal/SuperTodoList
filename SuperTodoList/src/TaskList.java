@@ -42,7 +42,7 @@ public class TaskList {
 		}
 	}
 	/**
-	 * Ajout d'une tâche
+	 * Ajout d'une tâche simple
 	 * 
 	 * @param label Label de la tâche à ajouter
 	 * @return <ul>
@@ -51,7 +51,20 @@ public class TaskList {
 	 * 
 	 */
 	public Boolean addTask(String label){
-		Task newTask = new Task(label);
+		SimpleTask newTask = new SimpleTask(label);
+		return addTask(newTask);
+	}
+	/**
+	 * Ajout d'un rendez-vous
+	 * 
+	 * @param label Label de la tâche à ajouter
+	 * @return <ul>
+	 * 			<il>true : la tâche a été ajouté</il>
+	 * 			<il>false : la tâche n'a pas été ajouté</il>
+	 * 
+	 */
+	public Boolean addTask(String label, int day, int month, int year, int hour, int minutes){
+		RDV newTask = new RDV(label,  day,  month,  year,  hour,  minutes);
 		return addTask(newTask);
 	}
 	/**

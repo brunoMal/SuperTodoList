@@ -12,16 +12,21 @@ public abstract class Task {
 	private String label;
 	private Boolean state;
 	
-	private String getLabel() {
+	/**********************
+	 * Accesseurs et Modificateurs des attributs
+	 * 
+	 * 
+	 */
+	protected String getLabel() {
 		return label;
 	}
-	private Boolean getState() {
+	protected Boolean getState() {
 		return state;
 	}
-	private void setLabel(String label) {
+	protected void setLabel(String label) {
 		this.label = label;
 	}
-	private void setState(Boolean state) {
+	protected void setState(Boolean state) {
 		this.state = state;
 	}
 	

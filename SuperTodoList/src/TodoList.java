@@ -12,17 +12,11 @@ public class TodoList {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		TaskList list = new TaskList();
+		RDV t = new RDV("Test", 1, 10, 2014, 10, 30);
 		
-		list.addTask("Test");
-		list.addTask("Test 2");
-		
-		list.taskDone(0);
-		
-		System.out.println(list);
-		list.tasks[0].label = "label modifié";
-		
-		System.out.println(list.tasks[0]);
+		System.out.println(t);
+		if (t.isLate()) {
+			System.out.println("Trop tard");
+		}
 	}
 }
