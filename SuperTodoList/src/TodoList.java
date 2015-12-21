@@ -15,8 +15,15 @@ public class TodoList {
 		// TODO Auto-generated method stub
 		Task t = new Task("Test", false);
 		
-		
-		System.out.println("Tache'" + t.label + "'=>" + t.state);
+		System.out.println(t);
+		//t.done();
+
+		if (t.isDone()) {
+			System.out.println("Tâche éffectué !");
+		} else {
+			System.out.print("Tâche à faire !");
+
+		}
 	}
 
 }
